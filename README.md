@@ -3,11 +3,11 @@
 Graphical PulseAudio/PipeWire volume control as a charly layer — the
 `pavucontrol` GTK mixer for desktop containers.
 
-The `pavucontrol` candy installs the `pavucontrol` GTK mixer and pulls in the
-`pipewire` candy, whose PulseAudio-compatible server `pavucontrol` connects to.
-The binary lands at `/usr/bin/pavucontrol` and is launched on demand (e.g. from
-the waybar volume indicator), so both its presence and the audio backend it
-drives are build-time verifiable.
+The `pavucontrol` candy installs the `pavucontrol` GTK mixer and `require:`s
+`opencharly/pod-pipewire` — the `pipewire` candy, whose PulseAudio-compatible
+server `pavucontrol` connects to. The binary lands at `/usr/bin/pavucontrol` and
+is launched on demand (e.g. from the waybar volume indicator), so both its
+presence and the audio backend it drives are build-time verifiable.
 
 ## What it provides
 
@@ -21,7 +21,17 @@ drives are build-time verifiable.
 
 ## How to use it
 
-Compose the layer in a desktop box's `candy:` list, or launch it on demand:
+Compose the layer by pinning this repo in a box's `candy:` list:
+
+```yaml
+my-desktop-box:
+  candy:
+    base: fedora-nonfree
+    candy:
+      - '@github.com/opencharly/layer-pavucontrol:v2026.243.0515'
+```
+
+Once deployed, launch the mixer on demand:
 
 ```bash
 pavucontrol &
