@@ -3,7 +3,7 @@
 Standalone candy repo for the `pavucontrol` layer — the PulseAudio/PipeWire GTK
 volume-control mixer for desktop containers. The candy lives in `charly.yml` at
 the repo root: the `require:` on `pod-pipewire`, the per-distro package arms, the
-`plan:` checks, and the embedded `skill:` entity projected into the marketplace
+`plan:` checks, and the embedded `skill:` entity (the `pavucontrol-skill:` node) projected into the marketplace
 corpus as `/charly-selkies:pavucontrol`.
 
 Canonical files:
