@@ -8,7 +8,7 @@ pavucontrol:
             from the waybar volume indicator), so both its presence and the audio
             backend it drives are build-time verifiable.
         require:
-            - '@github.com/opencharly/pod-pipewire:v2026.272.0227'
+            - '@github.com/opencharly/pod-pipewire:v2026.273.1856'
         distro:
             arch:
                 package:
